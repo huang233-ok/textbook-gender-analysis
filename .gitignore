@@ -1,0 +1,23 @@
+# 环境变量（含API密钥）
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# 临时文件
+temp_images/
+*.tmp
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 大文件（PDF教材）
+数据/*.pdf
+
+# IDE
+.vscode/
+.idea/

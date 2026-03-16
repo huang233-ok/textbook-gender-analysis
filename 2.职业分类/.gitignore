@@ -1,0 +1,37 @@
+# 环境变量（包含敏感信息，绝不上传）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 大文件（超过100MB不建议用Git管理）
+# 如果需要备份大文件，建议使用 Git LFS 或单独备份
+*.zip
+
+# 临时文件
+~$*
+*.tmp
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db

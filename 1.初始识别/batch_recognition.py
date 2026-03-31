@@ -20,7 +20,7 @@ from pydantic import BaseModel, Field
 from typing import List
 
 # ── 加载API配置 ──
-load_dotenv(Path(__file__).parent / "1.初始识别" / ".env")
+load_dotenv(Path(__file__).parent / ".env")
 
 client = OpenAI(
     base_url=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"),
@@ -28,7 +28,7 @@ client = OpenAI(
 )
 MODEL_NAME = os.getenv("MODEL_NAME", "openai/gpt-5-chat")
 
-PROJECT_ROOT = Path(__file__).parent.resolve()
+PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 DATA_DIR = PROJECT_ROOT / "数据" / "道法教材"
 RESULT_DIR = PROJECT_ROOT / "结果" / "1.识别结果"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)

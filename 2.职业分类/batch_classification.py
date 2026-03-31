@@ -15,7 +15,7 @@ if sys.stderr.encoding != 'utf-8':
     sys.stderr.reconfigure(encoding='utf-8')
 
 # ── 加载API配置（职业分类阶段）──
-CLASS_DIR = Path(__file__).parent / "2.职业分类"
+CLASS_DIR = Path(__file__).parent
 load_dotenv(CLASS_DIR / ".env")
 
 API_KEY = os.getenv("API_KEY")
@@ -23,12 +23,12 @@ BASE_URL = os.getenv("BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode
 MODEL_NAME = os.getenv("MODEL_NAME", "qwen-plus-2025-12-01")
 
 if not API_KEY:
-    raise ValueError("请在 2.职业分类/.env 文件中设置 API_KEY")
+    raise ValueError("请在 2.职业分类/.env 文件中设置 API_KEY（当前脚本位于 2.职业分类/ 目录下）")
 
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
 # ── 路径 ──
-PROJECT_ROOT = Path(__file__).parent.resolve()
+PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 INPUT_DIR = PROJECT_ROOT / "结果" / "1.识别结果"
 OUTPUT_DIR_1 = PROJECT_ROOT / "结果" / "2.分类结果" / "一位码"
 OUTPUT_DIR_3 = PROJECT_ROOT / "结果" / "2.分类结果" / "三位码"

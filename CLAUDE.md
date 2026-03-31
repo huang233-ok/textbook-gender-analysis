@@ -65,6 +65,11 @@
 
 ## 注意事项
 - v3.2识别代码已处理枚举前缀清洗（输出纯中文值）
+- 场景类型只有5类：家庭、学校、工作场所、公共场所、其他。不要自行添加新分类
+- 不要自作主张添加用户未要求的分类或字段，修改前先确认
+- 独立职业表去重后无identifier列，profession="未知"的记录无法走轨道B分类（已知问题）
 - 教材PDF文件较大，已在.gitignore中排除
 - 每次修改代码后应提交git，保持版本可追溯
 - 旧版代码（v3.1、Profession Matching）保留供参考，不再使用
+- GitHub仓库：https://github.com/huang233-ok/textbook-gender-analysis
+- Git代理：http://127.0.0.1:7897（本机VPN端口）
